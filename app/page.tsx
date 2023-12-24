@@ -26,7 +26,7 @@ export default function Home() {
       <Hero scrollToSection={scrollToSection}/>
       <Features/>
       <Pricing/>
-      <Cta/>
+      <Cta scrollToSection={scrollToSection}/>
       <Faq/>
     </main>
     </>

@@ -46,13 +46,12 @@ export default function Hero({ scrollToSection }: NavbarProps) {
             fugiat veniam occaecat fugiat aliqua.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
-            <a
-              href="#pricing"
+            <button
               className="rounded-md bg-gray-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-400"
-              onClick={() => handleNavigationClick('#pricing')}
+              onClick={() => handleNavigationClick('#pricing'.slice(1))}
             >
               Get started
-            </a>
+            </button>
           </div>
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">

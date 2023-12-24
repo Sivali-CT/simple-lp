@@ -42,14 +42,13 @@ export default function Navbar({ scrollToSection }: NavbarProps) {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <a
+            <button
               key={item.name}
-              href={item.href}
               className="text-sm font-normal tracking-wider leading-6 text-gray-900"
               onClick={() => handleNavigationClick(item.href.slice(1))}
             >
               {item.name}
-            </a>
+            </button>
           ))}
         </div>
       </nav>

@@ -1,4 +1,12 @@
-export default function Cta() {
+interface NavbarProps {
+  scrollToSection: (id: string) => void;
+}
+
+export default function Cta({ scrollToSection }: NavbarProps) {
+  const handleNavigationClick = (id: string) => {
+    scrollToSection(id);
+  };
+
     return (
       <div className="bg-white" id="contact">
         <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
@@ -11,12 +19,13 @@ export default function Cta() {
               commodo do ea.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#pricing"
+              <button
                 className="rounded-md bg-gray-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                onClick={() => handleNavigationClick('#pricing'.slice(1))}
+
               >
                 Get started
-              </a>
+              </button>
             </div>
           
           </div>
